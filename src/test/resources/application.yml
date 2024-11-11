@@ -1,0 +1,90 @@
+spring:
+  jpa:
+    open-in-view: false
+
+  data:
+    mongodb:
+      uri: "mongodb+srv://dal-readonly:JZusTaECx9wQg2EO@ma-ds-ody-dal-mongodb-u-pl-0-lb.k7qem.mongodb.net/dal-db-uat.legalentities-firmographics"
+
+api:
+  auth:
+    header-name: x-api-key
+    token: 2OyUaS36Fi3lMzNaQMCNxtZGQh9oJjfH
+
+legal:
+  api:
+    url: https://uat.cds-api.moodys.com/v0
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+  jpa:
+    open-in-view: false
+
+
+  data:
+    mongodb:
+      uri: ""
+
+
+api:
+  auth:
+    header-name: x-api-key
+    token: 2OyUaS36Fi3lMzNaQMCNxtZGQh9oJjfH
+
+legal:
+  api:
+    url: https://uat.cds-api.moodys.com/v0
+
+---
+spring:
+  config:
+    activate:
+      on-profile: qa
+
+  jpa:
+    open-in-view: false
+
+
+  data:
+    mongodb:
+      uri: ""
+
+api:
+  auth:
+    header-name: x-api-key
+    token: 2OyUaS36Fi3lMzNaQMCNxtZGQh9oJjfH
+
+legal:
+  api:
+    url: https://uat.cds-api.moodys.com/v0
+
+
+#logging:
+#  level:
+#    root: debug
+#    com:
+#      moodys: debug
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: uat
+
+  data:
+    mongodb:
+      uri: "mongodb+srv://dal-readonly:JZusTaECx9wQg2EO@ma-ds-ody-dal-mongodb-u-pl-0-lb.k7qem.mongodb.net/dal-db-uat.legalentities-firmographics"
+
+api:
+  auth:
+    header-name: x-api-key
+    token: 2OyUaS36Fi3lMzNaQMCNxtZGQh9oJjfH
+
+legal:
+  api:
+    url: https://uat.cds-api.moodys.com/v0
